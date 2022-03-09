@@ -17,6 +17,8 @@ Search.Playlist("PLAYLİST_URL")
 // YOUTUBE PLAYLİST DETAİLS FUNCTİON ADDED
 ```
 
+## 24/7 in maintenance
+
 # SYSTEMS
 
 ## Level System
@@ -141,16 +143,7 @@ module.exports.help = {
 }
 ```
 
-```js
- ///SEARCH
- 
-const scs = new Novader.Search("YOUTUBE_APİ_KEY");
 
-  await scs.getPlaylist("<Youtube-PLAYLİST-url>") // youtube playlist music url infos
- await scs.SearchVideo("<Youtube-Search>") //SEARCH
- await scs.VideoGet("<Youtube-Video-URL>") //VİDEO İNFOS
- await scs.GetSpotify("<Spotify-url>") // spotify music url infos
-```
 
 # Search Appearances
 ```js
@@ -158,22 +151,18 @@ const scs = new Novader.Search("YOUTUBE_APİ_KEY");
 ====> EXAMPLE
 const Novader = require("novader")
 const Search = new Novader.Search("You_Key");
-const eco = new Novader.Economy();
-const elements = {
-    search:"riv riv riv",
-    spotify:"https://open.spotify.com/track/5nTtCOCds6I0PHMNtqelas",
-    url:"https://www.youtube.com/watch?v=GIkKGW628aQ",
-    id:"GIkKGW628aQ"
-}
 async function Search() {
-    let SearchVideo = await Search.SearchVideo(elements.search)
+    let SearchVideo = await Search.SearchVideo("riv riv riv")
     console.log(SearchVideo)
 
     let getVideo = await SearchScript.VideoGet(elements.url)
     console.log(getVideo)
   
-   let SpotifySearch = await SearchScript.GetSpotify(elements.spotify)
+   let SpotifySearch = await SearchScript.GetSpotify("https://open.spotify.com/track/5nTtCOCds6I0PHMNtqelas")
       console.log(SpotifySearch)
+      
+  let Playlist = Search.Playlist("https://www.youtube.com/watch?v=82PsUyCKuUc&list=PLblKrj0aH7t6Me4jzOxNSIxC2Ki1qZmyG")
+  console.log(Playlist)
 ```
 
 
