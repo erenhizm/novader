@@ -1,3 +1,4 @@
+const Novader = require("novader")
 const player = new Novader.Player("YOUTUBE_APİ_KEY");
 
 await player.play("video NAME/URL") //VİDEO PLAY CODE
