@@ -8,6 +8,6 @@ const song = await scs.SearchVideo(args.join(' '))
 message.channel.send(`**Song Name**: ${song.title}\n**Song publication** : ${song.publication} \n**Song Channel Name**:${song.channel.name}`)
 };
 module.exports.help = {
-    name:"test",
-    aliases:["novader"]
+    name:"yt-search",
+    aliases:["yt-info","yts","search-youtube"]
 }
