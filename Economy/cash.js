@@ -8,9 +8,9 @@ module.exports.run = async (message, client, args) => {
     message.channel.send(`Hi, ${message.author.username} Account Created!\n Try Again!`)
   return}
 if(message.mentions.members.first()){
-message.channel.send(`Member Cash **${eco.get(member.id).money}**`)
+message.channel.send(`Member Cash **${eco.Account(member.id).money}**`)
 } else {
-message.channel.send(`Your Cash **${eco.get(message.author.id).money}**`)
+message.channel.send(`Your Cash **${eco.Account(message.author.id).money}**`)
 }
 };
 module.exports.help = {
